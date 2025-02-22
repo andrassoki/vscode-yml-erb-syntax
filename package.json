@@ -1,0 +1,44 @@
+{
+  "name": "vscode-yml-erb-syntax",
+  "displayName": "YAML + ERB Syntax",
+  "description": "Syntax highlighting for .yml.erb files (YAML + ERB)",
+  "version": "0.0.1",
+  "publisher": "andrassoki",
+  "author": {
+    "name": "András Sóki"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "license": "MIT",
+  "categories": ["Programming Languages"],
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/andrassoki/vscode-yml-erb-syntax.git"
+	},
+  "contributes": {
+    "languages": [
+      {
+        "id": "yml.erb",
+        "aliases": ["YAML (ERB)"],
+        "extensions": [".yml.erb"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "yml.erb",
+        "path": "./syntaxes/yml.erb.tmLanguage.json",
+        "scopeName": "source.yml.erb"
+      }, {
+        "language": "erb",
+        "path": "./syntaxes/erb.tmLanguage.json",
+        "scopeName": "source.ext.erb",
+        "injectTo": ["source.yml.erb"],
+        "embeddedLanguages": {
+            "source.ruby": "ruby"
+        }
+      }
+    ]
+  }
+}

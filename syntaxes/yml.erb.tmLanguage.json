@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "YAML (ERB)",
+  "scopeName": "source.yml.erb",
+  "patterns": [
+    {
+      "include": "source.yaml"
+    }
+  ],
+  "repository": {}
+}
